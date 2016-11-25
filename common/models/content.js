@@ -5,40 +5,50 @@ module.exports = function (Content) {
 
   Content.MethodFirst = function (content) {
     console.log("Method First", content);
-    content = content+1;
+    content = content + 1;
     return content;
   };
 
 
   Content.MethodSecond = function (content) {
     console.log("Method Second", content);
-    for(var i=0;i<5;i++)
-      console.log(i)
+    for (var i = 0; i < 5; i++)
+      console.log(i);
 
   };
 
   Content.MethodThird = function (content) {
-    console.log("Method Third", content)
+    console.log("Method Third", content);
 
   };
 
   function first(content) {
 
-    return content
+    return content;
   }
 
   function second(content) {
 
-    return content
+    return content;
   }
 
   function third(content) {
 
-    return content
+    return content;
   }
 
 
+  Content.beforeRemote("create", function (next, modelInstance, ctx) {
 
+    console.log("Tworzenie");
+
+    for (var i = 0; i < 5; i++)
+      console.log(i);
+
+
+    next();
+
+  });
 
   Content.search = function (filter, cb) {
 
@@ -54,27 +64,28 @@ module.exports = function (Content) {
     };
 
 
-
-
-
-
     Content.find(query).then(function (res) {
-      console.log(res);
+      console.log(res)
+      // console.log("First", first(1));
+      // console.log("Second", second(2));
+      // console.log("Third", third(3));
+      //
+      //
+      // Content.MethodFirst(1);
+      // Content.MethodSecond(2);
+      // Content.MethodThird(3);
 
-      console.log("First",first(1));
-      console.log("Second",second(2));
-      console.log("Third", third(3));
+      return res
 
 
-      Content.MethodFirst(1);
-      Content.MethodSecond(2);
-      Content.MethodThird(3);
+    }).then(function (res) {
+      console.log("ressss", res);
 
       return cb(null, res);
 
-
     }).catch(function (err) {
-      return cb(err, null)
+
+      return cb(err, null);
     })
 
 
