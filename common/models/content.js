@@ -4,14 +4,14 @@ module.exports = function (Content) {
 
 
   Content.MethodFirst = function (content) {
-    console.log("Method First", content)
+    console.log("Method First", content);
     content = content+1;
     return content;
   };
 
 
   Content.MethodSecond = function (content) {
-    console.log("Method Second", content)
+    console.log("Method Second", content);
     for(var i=0;i<5;i++)
       console.log(i)
 
