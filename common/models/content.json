@@ -10,8 +10,11 @@
     "TimeStamp": true
   },
   "properties": {
-    "mainContetn": {
+    "mainContent": {
       "type": "String"
+    },
+    "coordinates": {
+      "type": "Geopoint"
     }
   },
   "validations": [],
