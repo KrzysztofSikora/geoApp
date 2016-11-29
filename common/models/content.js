@@ -66,14 +66,14 @@ module.exports = function (Content) {
 
     Content.find(query).then(function (res) {
       console.log(res)
-      // console.log("First", first(1));
-      // console.log("Second", second(2));
-      // console.log("Third", third(3));
-      //
-      //
-      // Content.MethodFirst(1);
-      // Content.MethodSecond(2);
-      // Content.MethodThird(3);
+      console.log("First", first(1));
+      console.log("Second", second(2));
+      console.log("Third", third(3));
+
+
+      Content.MethodFirst(1);
+      Content.MethodSecond(2);
+      Content.MethodThird(3);
 
       return res
 
