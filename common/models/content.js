@@ -37,7 +37,7 @@ module.exports = function (Content) {
     return content;
   }
 
-
+//@TODO skeleton observer
   Content.beforeRemote("create", function (next, modelInstance, ctx) {
 
     console.log("Tworzenie");
