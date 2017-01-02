@@ -2,6 +2,10 @@
 
 module.exports = function (Content) {
 
+  var clause = false;
+  var value = (clause) ? "first true" : "second false";
+
+  console.log("Clause ", value);
 
   Content.MethodFirst = function (content) {
     console.log("Method First", content);
