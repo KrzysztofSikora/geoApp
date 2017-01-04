@@ -2,6 +2,8 @@
 
 module.exports = function (Content) {
 
+
+  // short clause
   var clause = false;
   var value = (clause) ? "first true" : "second false";
 
